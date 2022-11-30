@@ -1,18 +1,10 @@
-version: '3.2'
+version: '3'
 services:
   ctfd-release-time-app:
     build:
       context: .
       dockerfile: Dockerfile
     restart: always
-    deploy:
-        resources:
-          reservations:
-            cpus: '0.1'
-            memory: 128M
-          limits:
-            cpus: '0.25'
-            memory: 256M
     networks:
       - ctfd-release-time-network
 
