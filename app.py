@@ -103,6 +103,7 @@ def set_challenge_visibility(challenge, is_visible):
 def get_max_score():
     response = requests.get(
         BASE_URL + SCORE_PATH,
+        json={},
         headers={"Authorization": "Bearer " + ACCESS_TOKEN}
     )
     max_score = 0
